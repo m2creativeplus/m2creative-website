@@ -78,9 +78,9 @@ body {
 /* Animated Grid Background */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(51, 65, 85, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(51, 65, 85, 0.3) 1px, transparent 1px);
-  background-size: 64px 64px;
+    linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
   animation: gridShift 20s linear infinite;
 }
 
@@ -109,3 +109,27 @@ body {
   background: rgba(251, 191, 36, 0.3);
   color: var(--color-m2-text);
 }
+
+/* M2 Logo Gold Filter — transforms black-on-white logo to sovereign gold on dark */
+.logo-gold {
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(15deg) brightness(1.05);
+}
+
+/* Hero background overlay */
+.hero-bg-overlay {
+  background-image: url('/images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+/* Card image hover effect */
+.card-image-zoom {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.card-image-zoom:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+

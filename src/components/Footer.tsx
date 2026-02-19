@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/data";
 
 export default function Footer() {
@@ -8,11 +9,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-m2-gold to-m2-gold-dark flex items-center justify-center font-heading font-bold text-m2-void text-lg">
-                M2
-              </div>
-              <span className="font-heading font-semibold text-m2-text">Creative</span>
+            <div className="mb-4">
+              <Image
+                src="/M2 Creative logo MD-02.webp"
+                alt="M2 Creative"
+                width={140}
+                height={56}
+                className="logo-gold h-12 w-auto"
+              />
             </div>
             <p className="text-sm text-m2-text-muted leading-relaxed mb-4">
               {siteConfig.tagline}

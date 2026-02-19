@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -41,10 +42,12 @@ export default function Home() {
       <main>
         {/* ═══════════════════ HERO ═══════════════════ */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Hero Background Texture */}
+          <div className="absolute inset-0 hero-bg-overlay" />
           {/* Animated Grid */}
-          <div className="absolute inset-0 grid-bg opacity-50" />
+          <div className="absolute inset-0 grid-bg opacity-30" />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-m2-void via-m2-void/80 to-m2-void" />
+          <div className="absolute inset-0 bg-gradient-to-b from-m2-void/60 via-m2-void/80 to-m2-void" />
           {/* Radial glow */}
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-m2-purple/10 rounded-full blur-[128px]" />
           <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-m2-gold/5 rounded-full blur-[100px]" />
@@ -228,13 +231,28 @@ export default function Home() {
                     href={`/portfolio#${cs.slug}`}
                     className="group block glass overflow-hidden hover:-translate-y-1 transition-all hover:shadow-xl"
                   >
-                    {/* Top Image Placeholder */}
-                    <div className="h-48 bg-gradient-to-br from-m2-void-light to-m2-void flex items-center justify-center border-b border-m2-border/30">
-                      <div className="text-center">
-                        <p className="font-heading text-4xl font-bold text-m2-gold">
+                    {/* Project Image */}
+                    <div className="h-48 relative overflow-hidden border-b border-m2-border/30">
+                      {cs.image ? (
+                        <Image
+                          src={cs.image}
+                          alt={cs.title}
+                          fill
+                          className="object-cover card-image-zoom"
+                        />
+                      ) : (
+                        <div className="h-full bg-gradient-to-br from-m2-void-light to-m2-void flex items-center justify-center">
+                          <p className="font-heading text-4xl font-bold text-m2-gold">
+                            {cs.impact}
+                          </p>
+                        </div>
+                      )}
+                      {/* Impact badge overlay */}
+                      <div className="absolute bottom-3 right-3 bg-m2-void/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-m2-gold/20">
+                        <p className="font-heading text-lg font-bold text-m2-gold leading-tight">
                           {cs.impact}
                         </p>
-                        <p className="text-sm text-m2-text-muted">
+                        <p className="text-[10px] text-m2-text-muted">
                           {cs.impactLabel}
                         </p>
                       </div>

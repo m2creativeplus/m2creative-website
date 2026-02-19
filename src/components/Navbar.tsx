@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -29,13 +30,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-m2-gold to-m2-gold-dark flex items-center justify-center font-heading font-bold text-m2-void text-lg">
-              M2
-            </div>
-            <span className="font-heading font-semibold text-m2-text hidden sm:block group-hover:text-m2-gold transition-colors">
-              Creative
-            </span>
+          <Link href="/" className="flex items-center gap-2 group">
+            <Image
+              src="/M2 Creative logo MD-02.webp"
+              alt="M2 Creative"
+              width={120}
+              height={48}
+              className="logo-gold h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Links */}

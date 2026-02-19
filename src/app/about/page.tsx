@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Building2,
   Shield,
@@ -80,7 +81,7 @@ export default function AboutPage() {
                   <p>
                     From designing Somaliland&apos;s National ID Card — the document
                     every citizen carries as proof of identity — to architecting
-                    the $14M modernization framework for the National Printing
+                    the comprehensive modernization framework for the National Printing
                     Agency, our work has always been about more than code.
                   </p>
                   <p>
@@ -137,6 +138,23 @@ export default function AboutPage() {
                 ({founder.nameSomali})
               </p>
               <p className="text-m2-purple font-medium mt-2">{founder.title}</p>
+            </motion.div>
+
+            {/* Founder Portrait */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="flex justify-center mb-12"
+            >
+              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-m2-gold/30 shadow-xl shadow-m2-gold/10">
+                <Image
+                  src="/images/founder-portrait.png"
+                  alt="Eng. Mahmoud Mohamed Awaleh"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
             </motion.div>
 
             <motion.div
