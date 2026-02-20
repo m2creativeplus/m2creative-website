@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/data";
+import AnimatedM2Logo from "@/components/AnimatedM2Logo";
 
 export default function Footer() {
   return (
@@ -10,13 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-4">
-              <Image
-                src="/M2 Creative logo MD-02.webp"
-                alt="M2 Creative"
-                width={140}
-                height={56}
-                className="logo-gold h-12 w-auto"
-              />
+              <AnimatedM2Logo size="sm" variant="parallax" />
             </div>
             <p className="text-sm text-m2-text-muted leading-relaxed mb-4">
               {siteConfig.tagline}

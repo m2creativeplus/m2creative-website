@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AnimatedM2Logo from "@/components/AnimatedM2Logo";
 import { stats, services, caseStudies } from "@/lib/data";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -57,8 +58,12 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               variants={stagger}
-              className="space-y-8"
+              className="space-y-8 flex flex-col items-center"
             >
+              <div className="mb-4">
+                <AnimatedM2Logo size="lg" variant="intro" />
+              </div>
+              
               {/* Overline */}
               <motion.p
                 custom={0}

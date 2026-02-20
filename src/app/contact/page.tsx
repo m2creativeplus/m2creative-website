@@ -10,13 +10,13 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useMutation } from "convex/react";
-import { api } from "../../convex/_generated/api";
+// import { useMutation } from "convex/react";
+// import { api } from "../../convex/_generated/api";
 import { siteConfig } from "@/lib/data";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState<"idle" | "sending" | "sent">("idle");
-  const submitContact = useMutation(api.contact.submit);
+  // const submitContact = useMutation(api.contact.submit);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,6 +30,8 @@ export default function ContactPage() {
     e.preventDefault();
     setFormState("sending");
     try {
+      // WHEN READY: Uncomment this and comment the setTimeout
+      /*
       await submitContact({
         name: formData.name,
         email: formData.email,
@@ -38,6 +40,8 @@ export default function ContactPage() {
         budget: formData.budget || undefined,
         message: formData.message,
       });
+      */
+      await new Promise((resolve) => setTimeout(resolve, 1500));
       setFormState("sent");
     } catch (error) {
       console.error("Form submission failed:", error);
