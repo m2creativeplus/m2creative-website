@@ -73,7 +73,7 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-4 text-m2-text-muted leading-relaxed">
                   <p>
-                    M2 Creative & Consulting was founded with a singular
+                    M2 Creative Plus was founded with a singular
                     conviction: that technology should serve sovereignty. In a
                     world where nations outsource their most critical digital
                     infrastructure, we chose to build it locally.

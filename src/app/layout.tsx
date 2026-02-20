@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "M2 Creative & Consulting — Architecting East Africa's Digital Future",
+  title: "M2 Creative Plus — Architecting East Africa's Digital Future",
   description:
     "AI-native digital transformation agency. We build sovereign systems for governments and enterprises across East Africa.",
   keywords: "M2 Creative, digital transformation, Somaliland, GovTech, AI, SaaS, strategic architecture",
   icons: {
-    icon: "/M2 Creative logo MD-01.webp",
+    icon: "/images/m2-logo-gold.png",
   },
   openGraph: {
-    title: "M2 Creative & Consulting",
+    title: "M2 Creative Plus",
     description: "Architecting the Digital Future of East Africa",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "M2 Creative & Consulting",
+    title: "M2 Creative Plus",
     description: "Architecting the Digital Future of East Africa",
   },
 };

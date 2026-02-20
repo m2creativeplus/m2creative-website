@@ -2,7 +2,7 @@
 // Single source of truth for all website content
 
 export const siteConfig = {
-  name: "M2 Creative & Consulting",
+  name: "M2 Creative Plus",
   tagline: "Architecting the Digital Future of East Africa.",
   description:
     "AI-native digital transformation agency. We build sovereign systems for governments and enterprises across East Africa.",
