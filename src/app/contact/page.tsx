@@ -10,10 +10,13 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useMutation } from "convex/react";
+import { api } from "../../convex/_generated/api";
 import { siteConfig } from "@/lib/data";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState<"idle" | "sending" | "sent">("idle");
+  const submitContact = useMutation(api.contact.submit);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,10 +29,22 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState("sending");
-    // Simulate form submission (replace with Convex mutation)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setFormState("sent");
-    console.log("Form submitted:", formData);
+    try {
+      await submitContact({
+        name: formData.name,
+        email: formData.email,
+        organization: formData.organization || undefined,
+        service: formData.service,
+        budget: formData.budget || undefined,
+        message: formData.message,
+      });
+      setFormState("sent");
+    } catch (error) {
+      console.error("Form submission failed:", error);
+      setFormState("idle");
+      // Add a simple fallback for demo or error state if needed
+      alert("Failed to send message. Please try again.");
+    }
   };
 
   return (
