@@ -32,7 +32,7 @@ export default function AboutPage() {
         {/* Hero */}
         <section className="py-24 lg:py-32 relative overflow-hidden">
           <div className="absolute inset-0 grid-bg opacity-30" />
-          <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-m2-purple/10 rounded-full blur-[128px]" />
+          <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-m2-blue/10 rounded-full blur-[128px]" />
           <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -137,7 +137,7 @@ export default function AboutPage() {
               <p className="text-m2-text-muted italic mt-1">
                 ({founder.nameSomali})
               </p>
-              <p className="text-m2-purple font-medium mt-2">{founder.title}</p>
+              <p className="text-m2-blue font-medium mt-2">{founder.title}</p>
             </motion.div>
 
             {/* Founder Portrait */}

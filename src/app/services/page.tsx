@@ -176,7 +176,7 @@ export default function ServicesPage() {
 
         {/* CTA */}
         <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-m2-void via-m2-purple/5 to-m2-void" />
+          <div className="absolute inset-0 bg-gradient-to-br from-m2-void via-m2-blue/5 to-m2-void" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

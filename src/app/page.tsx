@@ -50,7 +50,7 @@ export default function Home() {
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-m2-void/60 via-m2-void/80 to-m2-void" />
           {/* Radial glow */}
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-m2-purple/10 rounded-full blur-[128px]" />
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-m2-blue/10 rounded-full blur-[128px]" />
           <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-m2-gold/5 rounded-full blur-[100px]" />
 
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
@@ -264,7 +264,7 @@ export default function Home() {
                     </div>
                     {/* Content */}
                     <div className="p-6">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-m2-purple mb-2">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-m2-blue mb-2">
                         {cs.category} · {cs.timeline.split(" – ")[0]}
                       </p>
                       <h3 className="font-heading text-xl font-semibold text-m2-text mb-2 group-hover:text-m2-gold transition-colors">
@@ -302,7 +302,7 @@ export default function Home() {
 
         {/* ═══════════════════ CTA ═══════════════════ */}
         <section className="py-24 lg:py-32 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-m2-void via-m2-purple/5 to-m2-void" />
+          <div className="absolute inset-0 bg-gradient-to-br from-m2-void via-m2-blue/5 to-m2-void" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-m2-gold/5 rounded-full blur-[120px]" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}

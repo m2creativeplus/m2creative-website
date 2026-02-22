@@ -3,10 +3,10 @@
 @theme {
   --color-m2-void: #0f172a;
   --color-m2-void-light: #1e293b;
-  --color-m2-gold: #fbbf24;
-  --color-m2-gold-dark: #f59e0b;
-  --color-m2-purple: #8b5cf6;
-  --color-m2-purple-dark: #7c3aed;
+  --color-m2-gold: #D4AF37;
+  --color-m2-gold-dark: #b5952f;
+  --color-m2-blue: #1e3a5f;
+  --color-m2-green: #1B5E20;
   --color-m2-text: #f8fafc;
   --color-m2-text-muted: #94a3b8;
   --color-m2-border: #334155;
@@ -53,23 +53,23 @@ body {
 
 /* Gold Glow */
 .glow-gold {
-  box-shadow: 0 0 20px rgba(251, 191, 36, 0.15), 0 0 60px rgba(251, 191, 36, 0.05);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15), 0 0 60px rgba(212, 175, 55, 0.05);
 }
 
-.glow-purple {
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.15), 0 0 60px rgba(139, 92, 246, 0.05);
+.glow-blue {
+  box-shadow: 0 0 20px rgba(30, 58, 95, 0.25), 0 0 60px rgba(30, 58, 95, 0.1);
 }
 
 /* Gradient Text */
 .gradient-text-gold {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  background: linear-gradient(135deg, #D4AF37, #b5952f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.gradient-text-purple {
-  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+.gradient-text-blue {
+  background: linear-gradient(135deg, #1e3a5f, #2a4b7c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

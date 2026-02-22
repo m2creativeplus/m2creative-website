@@ -8,7 +8,7 @@ import { products, techStack } from "@/lib/data";
 
 const statusColors: Record<string, string> = {
   green: "bg-m2-success/20 text-m2-success border-m2-success/30",
-  purple: "bg-m2-purple/20 text-m2-purple border-m2-purple/30",
+  blue: "bg-m2-blue/20 text-m2-blue border-m2-blue/30",
   gold: "bg-m2-gold/20 text-m2-gold border-m2-gold/30",
 };
 
@@ -20,7 +20,7 @@ export default function ProductsPage() {
         {/* Hero */}
         <section className="py-24 lg:py-32 relative overflow-hidden">
           <div className="absolute inset-0 grid-bg opacity-30" />
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-m2-purple/10 rounded-full blur-[128px]" />
+          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-m2-blue/10 rounded-full blur-[128px]" />
           <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export default function ProductsPage() {
                 Our Ecosystem
               </p>
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-m2-text mb-6">
-                The M2 <span className="gradient-text-purple">Product Suite</span>
+                The M2 <span className="gradient-text-blue">Product Suite</span>
               </h1>
               <p className="text-lg text-m2-text-muted max-w-2xl leading-relaxed">
                 A complete ecosystem of sovereign technology products — from
@@ -69,7 +69,7 @@ export default function ProductsPage() {
                   <h3 className="font-heading text-xl font-semibold text-m2-text mb-1 group-hover:text-m2-gold transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-xs text-m2-purple font-medium mb-3">
+                  <p className="text-xs text-m2-blue font-medium mb-3">
                     {product.category}
                   </p>
                   <p className="text-sm text-m2-text-muted leading-relaxed mb-4">

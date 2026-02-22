@@ -53,7 +53,7 @@ export default function PortfolioPage() {
                 <div className="bg-gradient-to-r from-m2-void-light to-m2-void p-8 lg:p-12 border-b border-m2-border/30">
                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-m2-purple mb-2">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-m2-blue mb-2">
                         {cs.category} · {cs.pillar}
                       </p>
                       <h2 className="font-heading text-2xl lg:text-3xl font-bold text-m2-text mb-2">
@@ -148,7 +148,7 @@ export default function PortfolioPage() {
 
         {/* CTA */}
         <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-m2-void via-m2-purple/5 to-m2-void" />
+          <div className="absolute inset-0 bg-gradient-to-br from-m2-void via-m2-blue/5 to-m2-void" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
