@@ -2,21 +2,14 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Send,
-  Mail,
-  MapPin,
-  CheckCircle2,
-} from "lucide-react";
+import { Send, Mail, MapPin, CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-// import { useMutation } from "convex/react";
-// import { api } from "../../convex/_generated/api";
 import { siteConfig } from "@/lib/data";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState<"idle" | "sending" | "sent">("idle");
-  // const submitContact = useMutation(api.contact.submit);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,27 +22,22 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState("sending");
+    setError(null);
     try {
-      // WHEN READY: Uncomment this and comment the setTimeout
-      /*
-      await submitContact({
-        name: formData.name,
-        email: formData.email,
-        organization: formData.organization || undefined,
-        service: formData.service,
-        budget: formData.budget || undefined,
-        message: formData.message,
-      });
-      */
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // mailto fallback — replace with API route or Convex mutation once backend is set up
+      const subject = encodeURIComponent(`[M2 Creative Inquiry] ${formData.service}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\nOrganization: ${formData.organization}\nService: ${formData.service}\nBudget: ${formData.budget}\n\nMessage:\n${formData.message}`
+      );
+      window.open(`mailto:mahmoudawaleh@gmail.com?subject=${subject}&body=${body}`, "_blank");
+      setFormData({ name: "", email: "", organization: "", service: "", budget: "", message: "" });
       setFormState("sent");
-    } catch (error) {
-      console.error("Form submission failed:", error);
+    } catch {
       setFormState("idle");
-      // Add a simple fallback for demo or error state if needed
-      alert("Failed to send message. Please try again.");
+      setError("Failed to send message. Please try again.");
     }
   };
+
 
   return (
     <>
@@ -342,6 +330,9 @@ export default function ContactPage() {
                         </>
                       )}
                     </button>
+                    {error && (
+                      <p className="mt-4 text-sm text-red-400">{error}</p>
+                    )}
                   </form>
                 )}
               </motion.div>
